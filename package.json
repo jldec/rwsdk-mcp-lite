@@ -15,7 +15,9 @@
     "tail": "wrangler tail"
   },
   "dependencies": {
-    "rwsdk": "0.3.4"
+    "mcp-lite": "^0.1.2",
+    "rwsdk": "0.3.4",
+    "zod": "^4.1.5"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.12.3",
@@ -37,7 +39,7 @@
     }
   },
   "prettier": {
-    "printWidth": 100,
+    "printWidth": 120,
     "tabWidth": 2,
     "useTabs": false,
     "singleQuote": true,

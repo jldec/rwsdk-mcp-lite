@@ -1,4 +1,5 @@
-import { initClient, initClientNavigation } from 'rwsdk/client'
+import { initRealtimeClient } from 'rwsdk/realtime/client'
 
-initClient()
-initClientNavigation()
+initRealtimeClient({
+  key: 'rwsdk-mcp-lite'
+})
