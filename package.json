@@ -1,0 +1,47 @@
+{
+  "name": "rwsdk-mcp-lite",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev --force",
+    "test": "tsc && prettier --check .",
+    "build": "vite build",
+    "preview": "vite build && vite preview",
+    "format": "prettier --write .",
+    "ship": "vite build && wrangler deploy",
+    "types": "wrangler types --include-runtime false --strict-vars false",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {
+    "rwsdk": "0.3.4"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.12.3",
+    "@cloudflare/workers-types": "^4.20250906.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "wrangler": "^4.34.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "vite": "7"
+      }
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none"
+  }
+}
