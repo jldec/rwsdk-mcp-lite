@@ -16,15 +16,15 @@ export async function Home() {
         <a className="text-blue-500 underline" href="https://github.com/fiberplane/mcp" target="_blank">
           mcp-lite
         </a>{' '}
-        and{' '}
+        and RedwookSDK{' '}
         <a className="text-blue-500 underline" href="https://docs.rwsdk.com/core/realtime/" target="_blank">
-          rwsdk realtime RSC
+          realtime RSC
         </a>
         .
         <ul className="list-disc list-inside mt-2">
           <li className="">Connect to the streamable HTTP endpoint above from your favorite MCP client.</li>
           <li className="">
-            The MCP log output will appear for all users at{' '}
+            The MCP log output will appear for all users in realtime at{' '}
             <a href={url.origin + '/'} target="_blank">
               <code>{url.origin + '/'}</code>
             </a>
