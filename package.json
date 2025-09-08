@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "mcp-lite": "^0.1.2",
-    "rwsdk": "0.3.4",
+    "rwsdk": "0.3.6",
     "zod": "^4.1.5"
   },
   "devDependencies": {
