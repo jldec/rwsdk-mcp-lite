@@ -15,10 +15,21 @@ export async function Home() {
         Minimal MCP server using fiberplane{' '}
         <a className="text-blue-500 underline" href="https://github.com/fiberplane/mcp" target="_blank">
           mcp-lite
+        </a>{' '}
+        and{' '}
+        <a className="text-blue-500 underline" href="https://docs.rwsdk.com/core/realtime/" target="_blank">
+          rwsdk realtime RSC
         </a>
-        <br />
-        Log output will appear below
-        <br />
+        .
+        <ul className="list-disc list-inside mt-2">
+          <li className="">Connect to the streamable HTTP endpoint above from your favorite MCP client.</li>
+          <li className="">
+            The MCP log output will appear for all users at{' '}
+            <a href={url.origin + '/'} target="_blank">
+              <code>{url.origin + '/'}</code>
+            </a>
+          </li>
+        </ul>
         <ClearButton />
       </div>
       {logData.map((entry, i) => (
