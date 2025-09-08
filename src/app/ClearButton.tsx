@@ -4,7 +4,7 @@ import { clearLog } from '@/mcp/server-functions'
 export function ClearButton() {
   return (
     <button
-      className="text-white px-2 py-1 mt-2 rounded-md cursor-pointer bg-blue-500 hover:bg-blue-600 active:bg-blue-700"
+      className="px-2 py-1 text-sm rounded-md border-1 whitespace-nowrap border-gray-300 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
       onClick={async () => await clearLog()}
     >
       Clear Log
