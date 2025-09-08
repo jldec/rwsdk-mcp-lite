@@ -11,6 +11,6 @@ export function greet(name: string = 'world'): string {
   name = name.trim()
   const now = new Date()
   const formattedTime = formatter.format(now)
-  if (name === 'err') throw new Error('greet throws err')
+  if (name === 'error') throw new Error(`greet 'error' alwoys throws error.`)
   return `👋 hello ${name} ${formattedTime} 🚀`
 }

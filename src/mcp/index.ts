@@ -25,7 +25,8 @@ mcp.use(async (ctx, next) => {
     await next()
     await logger.log(JSON.stringify(ctx, null, 2))
   } catch (error) {
-    await logger.log(JSON.stringify(['' + error, ctx], null, 2))
+    await logger.log(JSON.stringify([''+error, ctx], null, 2))
+    throw error
   }
 })
 
