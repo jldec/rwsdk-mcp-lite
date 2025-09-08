@@ -8,6 +8,7 @@ import { Home } from '@/app/Home'
 import { httpHandler } from '@/mcp'
 
 export { RealtimeDurableObject } from 'rwsdk/realtime/durableObject'
+export { Logger } from '@/logger'
 
 export type AppContext = {}
 

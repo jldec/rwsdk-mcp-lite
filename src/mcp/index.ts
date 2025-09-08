@@ -1,7 +1,7 @@
 import { McpServer, StreamableHttpTransport } from 'mcp-lite'
 import { z } from 'zod'
 import { greet } from './greet'
-import { logger } from './logger'
+import { resolveLogger } from '@/logger'
 
 const mcp = new McpServer({
   name: 'rwsdk-mcp-lite',
@@ -20,11 +20,12 @@ mcp.tool('hello', {
 })
 
 mcp.use(async (ctx, next) => {
+  const logger = resolveLogger()
   try {
     await next()
-    logger.log(ctx)
+    await logger.log(JSON.stringify(ctx, null, 2))
   } catch (error) {
-    logger.log(['' + error, ctx])
+    await logger.log(JSON.stringify(['' + error, ctx], null, 2))
   }
 })
 

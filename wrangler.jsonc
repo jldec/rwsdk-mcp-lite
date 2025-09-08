@@ -12,6 +12,10 @@
       {
         "name": "REALTIME_DURABLE_OBJECT",
         "class_name": "RealtimeDurableObject"
+      },
+      {
+        "name": "LOGGER_DURABLE_OBJECT",
+        "class_name": "Logger"
       }
     ]
   },
@@ -19,6 +23,10 @@
     {
       "tag": "v1",
       "new_classes": ["RealtimeDurableObject"]
+    },
+    {
+      "tag": "v2",
+      "new_sqlite_classes": ["Logger"]
     }
   ]
 }

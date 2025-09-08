@@ -1,10 +1,12 @@
 import { requestInfo as r } from 'rwsdk/worker'
 import { Layout } from './Layout'
-import { logger } from '@/mcp/logger'
+import { resolveLogger } from '@/logger'
 import { ClearButton } from './ClearButton'
 
-export function Home() {
+export async function Home() {
   const url = new URL(r.request.url)
+  const logger = resolveLogger()
+  const logData = [...(await logger.getLogData())] // copy array to avoid blowing up
   return (
     <Layout title="rwsdk-mcp-lite">
       <div>
@@ -13,15 +15,15 @@ export function Home() {
           mcp-lite
         </a>
         <br />
-        Listening at <code>{url.origin}</code>/mcp.
+        <code>{url.origin}/mcp</code>
         <br />
-        Log output will appear below.
+        Log output will appear below
         <br />
         <ClearButton />
       </div>
-      {logger.getLogData().map((entry: any, i: number) => (
+      {logData.map((entry, i) => (
         <pre key={i} className="mt-2 text-sm border border-gray-300 rounded-md p-2">
-          {JSON.stringify(entry, null, 2)}
+          {entry}
         </pre>
       ))}
     </Layout>
