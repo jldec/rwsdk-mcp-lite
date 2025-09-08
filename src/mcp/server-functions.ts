@@ -1,6 +1,7 @@
 'use server'
-import { logger } from '@/mcp/logger'
+import { resolveLogger } from '@/logger'
 
 export async function clearLog() {
-  logger.clear()
+  const logger = resolveLogger()
+  await logger.clear()
 }
