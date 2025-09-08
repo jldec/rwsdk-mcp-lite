@@ -10,12 +10,12 @@ export async function Home() {
   return (
     <Layout title="rwsdk-mcp-lite">
       <div>
+        <code>{url.origin}/mcp</code>
+        <br />
         Minimal MCP server using fiberplane{' '}
         <a className="text-blue-500 underline" href="https://github.com/fiberplane/mcp" target="_blank">
           mcp-lite
         </a>
-        <br />
-        <code>{url.origin}/mcp</code>
         <br />
         Log output will appear below
         <br />
