@@ -1,5 +1,5 @@
 'use client'
-import { clearLog } from '@/mcp/server-functions'
+import { clearLog } from '@/logger/server-functions'
 
 export function ClearButton() {
   return (
