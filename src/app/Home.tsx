@@ -11,8 +11,7 @@ export async function Home() {
   return (
     <Layout title="rwsdk-mcp-lite">
       <div>
-        <code>{url.origin}/mcp</code>
-        <br />
+        <code className="block mb-2 text-sm">{url.origin}/mcp</code>
         Minimal MCP server using fiberplane{' '}
         <a className="text-blue-500 underline" href="https://github.com/fiberplane/mcp" target="_blank">
           mcp-lite
@@ -22,7 +21,7 @@ export async function Home() {
           realtime RSC
         </a>
         .
-        <ul className="list-disc list-outside pl-4 mt-2 max-w-xl">
+        <ul className="list-disc list-outside pl-4 mt-2">
           <li className="">
             Use the form below to call the hello tool, or connect to the streamable HTTP endpoint above from your
             favorite MCP client.
