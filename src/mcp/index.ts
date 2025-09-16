@@ -12,7 +12,7 @@ const mcp = new McpServer({
 mcp.tool('hello', {
   description: "Simple greeter tool MCP - says hello to name (defaults to 'world')",
   inputSchema: z.object({
-    name: z.optional(z.string())
+    name: z.optional(z.string()).describe('The name to greet')
   }),
   handler: (args) => ({
     content: [{ type: 'text', text: greet(args.name) }]

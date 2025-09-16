@@ -14,8 +14,6 @@ export function HelloForm() {
   const callHelloTool = async () => {
     try {
       setError('')
-      const params = name.trim() ? { name: name.trim() } : {}
-
       const response = await fetch('/mcp', {
         method: 'POST',
         headers: {
@@ -28,7 +26,7 @@ export function HelloForm() {
           method: 'tools/call',
           params: {
             name: 'hello',
-            arguments: params
+            arguments: name ? { name } : {}
           }
         })
       })
@@ -77,7 +75,7 @@ export function HelloForm() {
       <input
         type="text"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => setName(e.target.value.trim())}
         placeholder="Enter name"
         className="px-3 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
